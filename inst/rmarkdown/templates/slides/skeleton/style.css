@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i');
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
 
 
-body { 
-  font-family: 'Karla', sans-serif; 
+body {
+  font-family: 'Inter', sans-serif;
   color: #404e6b;
-  
 }
 
 
@@ -19,18 +22,22 @@ body {
 
 
 
-.large { 
-  font-size: 130% 
+.large {
+  font-size: 130%
 }
 
-.small { 
-  font-size: 70% 
+.small {
+  font-size: 70%
+}
+
+.small code {
+  font-size: 13px;
 }
 
 a , a > code {
   color: #6cabdd;
   text-decoration: underline;
-  
+
 }
 
 .error-text{
@@ -51,10 +58,9 @@ a , a > code {
      text-shadow: none;
 }
 
-.inverse, .inverse a {
+.inverse, .inverse a, .inverse a code {
   color: #f3f3f3;
 }
-
 
 
 
@@ -79,7 +85,7 @@ a , a > code {
     background-image: url("https://raw.githubusercontent.com/rfortherestofus/course-assets/master/images/rru-logo-blue.png");
 }
 
-.inverse:after, .dk-section-title:after {
+.inverse:after, .dk-section-title:after, .my-turn:after {
     content: "";
     position: absolute;
     top: 25px;
@@ -142,11 +148,16 @@ div.dk-footer a {
     text-decoration: none;
 }
 
+/* DK section title */
+
+.dk-section-title {
+box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
+}
 
 .dk-section-title div.dk-footer {
     display: none;
     opacity: 0.5;
-    
+
 }
 
 .dk-section-title h1 {
@@ -163,6 +174,75 @@ div.dk-footer a {
 
 .dk-section-title .remark-slide-number {
   display: none;
+}
+
+
+/* DK section title  light bg */
+
+.dk-section-title-light-bg {
+box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+}
+
+.dk-section-title-light-bg div.dk-footer {
+    display: none;
+    opacity: 0.5;
+
+}
+
+.dk-section-title-light-bg h1 {
+  color: #6cabdd;
+  font-size: 100px;
+  line-height: 1;
+}
+
+.dk-section-title-light-bg h2 {
+  color: #6cabdd;
+  font-size: 75px;
+  line-height: 1;
+}
+
+.dk-section-title-light-bg .remark-slide-number {
+  display: none;
+}
+
+/* My Turn */
+
+.my-turn {
+     background-color: #ff7400;
+     background-image: none;
+     text-shadow: none;
+}
+
+.my-turn h1, .my-turn h2, .my-turn h1, .my-turn p, .my-turn li, .my-turn a {
+  color: #ffffff;
+}
+
+.my-turn .dk-footer {
+    background-color: #ff7400;
+    border-top: none;
+}
+
+.my-turn div.dk-footer span, .my-turn div.dk-footer a {
+  color: #ffffff;
+}
+
+
+/* Lesson Title */
+
+
+.dk-lesson-title {
+     background-color: #6cabdd;
+     background-image: none;
+     text-shadow: none;
+}
+
+.dk-lesson-title h1, .dk-lesson-title h2 {
+  color: #6cabdd;
+}
+
+.dk-lesson-title .dk-footer {
+    background-color: #6cabdd;
+    border-top: none;
 }
 
 /* Highlight box */
@@ -232,4 +312,38 @@ div.dk-footer a {
 
 .tocify .tocify-item a, .tocify .list-group-item {
     padding: 10px;
+}
+
+/* Button */
+
+.button a {
+      background: linear-gradient(135deg, #3d78a7 0%, #6cabdd 100%);
+          display: inline-block;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    padding: 16px 32px;
+    padding-top: 16px;
+    padding-right: 32px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    border: 0;
+    border-radius: 32px;
+    color: #ffffff;
+    background-color: #ffffff;
+    box-shadow: 0 16px 32px -16px rgba(64, 78, 107, 0.1);
+    font-size: 14.99531px;
+    font-size: 1.49953rem;
+    font-weight: 700;
+    line-height: 1;
+    white-space: normal;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.title-slide h2 {
+  font-weight: 400;
 }
